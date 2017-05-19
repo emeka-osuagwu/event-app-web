@@ -1,0 +1,54 @@
+<div class="profile_info_section_compoment">    
+    <h3 class="profile_info_section_compoment__title" md-dialog-title>Work Contact info</h3>
+
+    <md-dialog-content fxLayout="column" fxlayoutGap="20px">
+        <div fxLayout="row" fxlayoutGap="20px">
+            <p class="profile_info_section_compoment__subtitle" fxFlex md-dialog-subtitle>Phone</p>
+            <md-icon class="profile_info_section_compoment__subtitle_icon" fxFlex="5%">add</md-icon>
+        </div>
+        <div>
+            <md-input-container fxFlex>
+                <input fxFlex mdInput>
+            </md-input-container>
+            <md-select class="profile_info_section_select" fxFlex="30%" placeholder="Favorite food">
+              <md-option>
+                dkfvjdfkjdfj
+              </md-option>
+            </md-select>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-content fxLayout="column" fxlayoutGap="20px">
+        <div fxLayout="row" fxlayoutGap="20px">
+            <p class="profile_info_section_compoment__subtitle" fxFlex md-dialog-subtitle>Phone</p>
+            <md-icon class="profile_info_section_compoment__subtitle_icon" fxFlex="5%">add</md-icon>
+        </div>
+        <div>
+            <md-input-container fxFlex>
+                <input fxFlex mdInput>
+            </md-input-container>
+            <md-select class="profile_info_section_select" fxFlex="30%" placeholder="Favorite food">
+              <md-option>
+                item
+              </md-option>
+            </md-select>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-content fxLayout="column">
+        <div fxLayout="row" fxlayoutGap="20px">
+            <p class="profile_info_section_compoment__subtitle" fxFlex md-dialog-subtitle>Address</p>
+            <md-icon class="profile_info_section_compoment__subtitle_icon" fxFlex="5%">add</md-icon>
+        </div>
+        <div>
+            <md-input-container fxFlex>
+                <input fxFlex mdInput>
+            </md-input-container>
+        </div>
+    </md-dialog-content>
+
+    <md-dialog-actions align="end" class="add_business_popup_con__action_con">
+        <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+        <button type="submit" md-button color="accent">Create</button>
+    </md-dialog-actions>
+</div>

@@ -1,0 +1,36 @@
+
+<div class="cover_photo_con">
+    <div class="cover_photo_con_bg" md-card-image style="background-image: url('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/10460788_790012217754489_5533088086305047746_n.jpg?oh=d25ef91fcc1baccfb5e6473d42bd2426&oe=59819958');">
+        <md-icon class="update_icon_1">home</md-icon>
+    
+        <div class="image_icon_con">
+            <img md-card-avatar class="image_icon_con-image" src="https://lh3.googleusercontent.com/-feWckKvmys4/AAAAAAAAAAI/AAAAAAAAAOM/P0CFbUymX4U/s240-p-rw-no/photo.jpg">
+        </div>
+    </div>
+
+    <form class="example-form" fxLayout="column">
+
+        <p fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="center center">
+            <md-input-container class="example-full-width" fxFlex="40%">
+                <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+            </md-input-container>
+            
+            <md-input-container class="example-full-width" fxFlex="40%">
+                <textarea mdInput placeholder="Address 2"></textarea>
+            </md-input-container>
+        </p>
+
+        <p fxLayoutGap="20px" fxFlex="100%" fxLayout="row" fxLayoutAlign="center center">
+            <md-input-container class="example-full-width" fxFlex="80%">
+                <textarea mdInput placeholder="Address">1600 Amphitheatre Pkwy</textarea>
+            </md-input-container>
+        </p>
+
+        <md-dialog-actions align="end" class="add_business_popup_con__action_con">
+            <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+            <button type="submit" md-button color="accent">Create</button>
+        </md-dialog-actions>
+        
+    </form>
+
+</div>

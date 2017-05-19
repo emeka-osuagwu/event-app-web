@@ -1,0 +1,38 @@
+<div class="profile_info_section_compoment" style="width: 400px;">    
+    
+    <h3 class="profile_info_section_compoment__title" md-dialog-title>Work History</h3>
+
+        <md-dialog-content fxLayout="column" fxlayoutGap="20px">
+            <div fxLayout="row" fxlayoutGap="20px">
+                <p class="profile_info_section_compoment__subtitle" fxFlex="30" md-dialog-subtitle>Company</p>
+                <p  *ngIf="pass_msg" class="profile_info_section_compoment__subtitle" fxFlex md-dialog-subtitle>You have booked this event center</p>
+                <p  *ngIf="error_msg" style="color: red" class="profile_info_section_compoment__subtitle" fxFlex md-dialog-subtitle>You need to enter all required field </p>
+            </div>
+            <div>
+                <md-input-container fxFlex>
+                    <input fxFlex mdInput placeholder="Name" [(ngModel)]="user_name">
+                </md-input-container>
+            </div>
+            <div>
+                <md-input-container fxFlex>
+                    <input fxFlex mdInput placeholder="Email"  [(ngModel)]="user_email" required>
+                </md-input-container>
+            </div>
+            <div>
+                <md-input-container fxFlex>
+                    <input fxFlex mdInput placeholder="Phone"  [(ngModel)]="user_phone" required>
+                </md-input-container>
+            </div>
+<!--             <div>
+                <md-input-container fxFlex>
+                    <input fxFlex mdInput placeholder="Title"  [(ngModel)]="user_logo" required>
+                </md-input-container>
+            </div> -->
+        </md-dialog-content>
+        <md-dialog-actions align="end" class="add_business_popup_con__action_con">
+            <button md-button type="button" (click)="dialogRef.close()">Cancel</button>
+            <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <button type="submit" md-button color="accent" (click)="book()">Create</button>
+        </md-dialog-actions>
+    
+</div>

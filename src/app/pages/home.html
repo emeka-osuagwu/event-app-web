@@ -1,0 +1,66 @@
+<md-sidenav-container class="example-sidenav-fab-container" >
+
+	
+	<div class="example-scrolling-content">
+
+		<!-- 		
+		<div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
+			<md-card fxFlex="80">
+			</md-card>
+			<md-card fxFlex fxLayout="column" fxLayoutGap="14px">
+				<button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
+				  <md-icon>add</md-icon>
+				</button>
+			</md-card>
+
+		</div> -->
+
+		<!-- 		
+		<md-card *ngIf="loader" fxLayoutAlign="center center">
+			<md-spinner></md-spinner>
+		</md-card> 
+		-->
+
+		<sebm-google-map  [latitude]="lat" [longitude]="lng">
+			<sebm-google-map-marker *ngFor="let m of halls"  [label]="m.label" [latitude]="m.lat" [longitude]="m.lng">
+				<sebm-google-map-info-window>
+					
+
+					<md-card *ngIf="m.status == 'booked'" style="width: 400px">
+						<md-card-title style="color: red">Booked</md-card-title>
+						<md-card-header>
+							<img  md-card-avatar src="{{m.booking[0].user_logo}}">
+							<md-card-title>{{m.name}}</md-card-title>
+							<md-card-subtitle>Booked by: {{m.booking[0].user_name}}</md-card-subtitle>
+						</md-card-header>
+						<img src="{{m.booking[0].user_logo}}" md-card-image>
+						<md-card-actions>
+							<!-- <button md-raised-button *ngIf="m.status == 'booked'">booked</button> -->
+							<button md-raised-button *ngIf="m.status == 'free'" (click)="openDialog(m)">book hall</button>
+						</md-card-actions>
+					</md-card>
+				
+					<md-card style="width: 400px" *ngIf="m.status == 'free'">
+						<md-card-title style="color: green">Book a free card</md-card-title>
+						<md-card-header>
+							<md-card-title>Name: {{m.name}}</md-card-title>
+							<md-card-subtitle>Address: {{m.address}}</md-card-subtitle>
+						</md-card-header>
+						<img src="{{m.image}}" md-card-image />
+						<md-card-actions>
+							<button md-raised-button (click)="openDialog(m)">book hall</button>
+						</md-card-actions>
+					</md-card>
+				</sebm-google-map-info-window>
+			</sebm-google-map-marker>
+		</sebm-google-map>
+
+
+		
+
+	</div>
+
+</md-sidenav-container>
+
+
+
