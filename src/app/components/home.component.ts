@@ -40,6 +40,7 @@ export class HomeComponent {
 
 	ngOnInit() {
 		this.halls = this.route.snapshot.data['halls']['data'];
+		console.log(this.halls)
 	}
 }
 

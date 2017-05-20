@@ -1,26 +1,6 @@
 <md-sidenav-container class="example-sidenav-fab-container" >
 
-	
 	<div class="example-scrolling-content">
-
-		<!-- 		
-		<div class="content" fxLayout="row" fxLayout.sm="column" fxLayoutGap="16px">
-			<md-card fxFlex="80">
-			</md-card>
-			<md-card fxFlex fxLayout="column" fxLayoutGap="14px">
-				<button md-mini-fab class="example-fab" (click)="sidenav.toggle()">
-				  <md-icon>add</md-icon>
-				</button>
-			</md-card>
-
-		</div> -->
-
-		<!-- 		
-		<md-card *ngIf="loader" fxLayoutAlign="center center">
-			<md-spinner></md-spinner>
-		</md-card> 
-		-->
-
 		<sebm-google-map  [latitude]="lat" [longitude]="lng">
 			<sebm-google-map-marker *ngFor="let m of halls"  [label]="m.label" [latitude]="m.lat" [longitude]="m.lng">
 				<sebm-google-map-info-window>
@@ -54,10 +34,6 @@
 				</sebm-google-map-info-window>
 			</sebm-google-map-marker>
 		</sebm-google-map>
-
-
-		
-
 	</div>
 
 </md-sidenav-container>
