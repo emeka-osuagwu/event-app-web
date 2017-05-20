@@ -9,7 +9,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 
 export class HallService implements Resolve<any>{
     
-    url: string = "http://event-app-api.mychocchip.com.ng/api/"
+    url: string = "https://event-app-api.mychocchip.com.ng/api/"
     
     constructor (private http: Http) {
 
