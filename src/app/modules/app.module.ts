@@ -28,7 +28,7 @@ import {
 		FormsModule,
 		BrowserModule,
 		FlexLayoutModule,
-		MaterialModule.forRoot(),
+		MaterialModule,
 		BrowserAnimationsModule,
 		AgmCoreModule.forRoot({
 			apiKey: 'AIzaSyAoJ-u0gp-apK-5_K9nnKQVoLY84l936-w'
